@@ -1,0 +1,24 @@
+{
+  "name": "e-learning",
+  "version": "1.0.0",
+  "homepage": "https://Sampreeth-CH.github.io/E-learning",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "framer-motion": "^12.19.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.30.1"
+  }
+}
