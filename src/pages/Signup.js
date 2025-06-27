@@ -1,68 +1,65 @@
-
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveUser } from '../utils/auth';
+import { saveUser, loginUser } from '../utils/auth';
 
 const Signup = ({ setIsLoggedIn }) => {
-  const [userName, setUserName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('');
   const navigate = useNavigate();
 
-  const handleSignup = () => {
-    if (!email || !password) {
-      setMsg('Please fill in all fields.');
-      return;
-    }
+  const handleSignup = (e) => {
+    e.preventDefault();
 
-    const newUser = { email, password };
-    saveUser(newUser);         // Save user to localStorage
-    setIsLoggedIn(true);       // Set login state
-    setMsg('Signup successful!');
-    navigate('/login');      // Redirect
+    const newUser = {username, email, password };
+    saveUser(newUser); // Save to localStorage
+
+    // Auto login after signup
+    const user = loginUser(email, password);
+    if (user) {
+      setIsLoggedIn(true);
+      navigate('/login');
+    }
   };
 
   return (
     <div className="signup">
-      <h2>Create Account</h2>
+      <h2>Sign Up</h2>
+      <form onSubmit={handleSignup}>
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder=" "
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <label>Username</label>
+        </div>
+        <div className="form-group">
+          <input
+            type="email"
+            placeholder=" "
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label>Email</label>
+        </div>
 
-      <div className="form-group">
-        <input 
-          type="text" 
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)} 
-          required 
-          placeholder=" "
-        />
-        <label>Username</label>
-      </div>
+        <div className="form-group">
+          <input
+            type="password"
+            placeholder=" "
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <label>Password</label>
+        </div>
 
-      <div className="form-group">
-        <input 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
-          placeholder=" "
-        />
-        <label>Email</label>
-      </div>
-
-      <div className="form-group">
-        <input 
-          type="password" 
-          value={password}
-          onChange={(e) => setPassword(e.target.value)} 
-          required 
-          placeholder=" "
-        />
-        <label>Password</label>
-      </div>
-
-      <button onClick={handleSignup}>Sign Up</button>
-
-      {msg && <p style={{ marginTop: '1rem', color: 'green' }}>{msg}</p>}
+        <button type="submit">Signup</button>
+      </form>
     </div>
   );
 };

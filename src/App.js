@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -7,10 +6,10 @@ import CourseDetail from './pages/CourseDetail';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import About from './pages/About';
-import { getUser } from './utils/auth';
 import Profile from './pages/Profile';
-
-
+import PrivateRoute from './components/PrivateRoute'; // import here
+import { useState, useEffect } from 'react';
+import { getUser } from './utils/auth';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,16 +24,36 @@ function App() {
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/courses/:id" element={<CourseDetail />} />
+        <Route
+          path="/courses"
+          element={
+            <PrivateRoute>
+              <Courses />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/courses/:id"
+          element={
+            <PrivateRoute>
+              <CourseDetail />
+            </PrivateRoute>
+          }
+        />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />}/>
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile isLoggedIn={isLoggedIn} />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-

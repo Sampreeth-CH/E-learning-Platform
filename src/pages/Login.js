@@ -1,59 +1,54 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getUser } from '../utils/auth';
+import { loginUser } from '../utils/auth';
 
 const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('');
   const navigate = useNavigate();
+  const [error, setError] = useState('');
 
-  const handleLogin = () => {
-    const storedUser = getUser();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const user = loginUser(email, password);
 
-    if (!storedUser) {
-      setMsg('No account found. Please sign up first.');
-      return;
-    }
-
-    if (email === storedUser.email && password === storedUser.password) {
+    if (user) {
       setIsLoggedIn(true);
-      setMsg('Login successful!');
-      navigate('/courses');
+      navigate('/');
     } else {
-      setMsg('Invalid email or password.');
+      setError('Invalid credentials. Try again.');
     }
   };
 
   return (
     <div className="login">
-      <h2>Login</h2>
+      <h2>Log In</h2>
+      <form onSubmit={handleLogin}>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <div className="form-group">
+          <input
+            type="email"
+            placeholder=" "
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label>Email</label>
+        </div>
 
-      <div className="form-group">
-        <input 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          placeholder=" "
-        />
-        <label>Email</label>
-      </div>
+        <div className="form-group">
+          <input
+            type="password"
+            placeholder=" "
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <label>Password</label>
+        </div>
 
-      <div className="form-group">
-        <input 
-          type="password" 
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          placeholder=" "
-        />
-        <label>Password</label>
-      </div>
-
-      <button onClick={handleLogin}>Login</button>
-
-      {msg && <p style={{ marginTop: '1rem', color: msg.includes('success') ? 'green' : 'red' }}>{msg}</p>}
+        <button type="submit">Login</button>
+      </form>
     </div>
   );
 };
