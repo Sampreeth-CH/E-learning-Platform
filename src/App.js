@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/E-learning">
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -4,57 +4,37 @@ import { FaChalkboardTeacher, FaLaptopCode, FaCertificate } from 'react-icons/fa
 
 const Home = () => {
   return (
-    <motion.div 
-      className="home"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <h2>Welcome to E-Learn</h2>
-      <p>Explore a wide range of online courses taught by experts and build your future today.</p>
-
-      {/* 🔥 Feature Section */}
-      <section className="features" style={{ marginTop: "3rem", display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap" }}>
-        <motion.div whileHover={{ scale: 1.05 }} className="feature-card">
-          <FaChalkboardTeacher size={40} color="#007bff" />
-          <h3>Expert Instructors</h3>
-          <p>Learn from industry professionals with real-world experience.</p>
-        </motion.div>
-        <motion.div whileHover={{ scale: 1.05 }} className="feature-card">
-          <FaLaptopCode size={40} color="#007bff" />
-          <h3>Hands-On Projects</h3>
-          <p>Apply your skills with real coding challenges and assignments.</p>
-        </motion.div>
-        <motion.div whileHover={{ scale: 1.05 }} className="feature-card">
-          <FaCertificate size={40} color="#007bff" />
-          <h3>Certifications</h3>
-          <p>Get certified to boost your resume and career opportunities.</p>
-        </motion.div>
+    <div className="home">
+      <section className="hero">
+        <h2>Welcome to E-Learn</h2>
+        <p>Empower your future with expert-led courses.</p>
+        <img src="https://images.unsplash.com/photo-1584697964154-9437e03e7c7b" alt="Learning" className="hero-img" />
       </section>
 
-      {/* CTA */}
-      <motion.div 
-        className="cta" 
-        style={{ marginTop: "4rem" }} 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        <Link to="/courses">
-          <button style={{
-            padding: "1rem 2rem",
-            background: "#007bff",
-            color: "white",
-            borderRadius: "10px",
-            fontSize: "1rem",
-            cursor: "pointer",
-            border: "none"
-          }}>
-            Start Learning Now
-          </button>
-        </Link>
-      </motion.div>
-    </motion.div>
+      <section className="features">
+        <div className="feature-card">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Interactive" />
+          <h3>Interactive Lessons</h3>
+          <p>Engage with quizzes, examples, and practical tasks.</p>
+        </div>
+        <div className="feature-card">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Experts" />
+          <h3>Expert Instructors</h3>
+          <p>Courses taught by real-world professionals.</p>
+        </div>
+        <div className="feature-card">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Certificate" />
+          <h3>Certified Programs</h3>
+          <p>Earn certificates to showcase your knowledge.</p>
+        </div>
+      </section>
+
+      <section className="cta">
+        <h2>Start Your Learning Journey</h2>
+        <p>Join thousands of learners today.</p>
+        <Link to="/signup" className="btn-primary">Join Now</Link>
+      </section>
+    </div>
   );
 };
 
