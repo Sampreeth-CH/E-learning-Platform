@@ -10,6 +10,9 @@ import Profile from './pages/Profile';
 import PrivateRoute from './components/PrivateRoute'; // import here
 import { useState, useEffect } from 'react';
 import { getUser } from './utils/auth';
+import Contact from './pages/Contact';
+
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,6 +44,7 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
         <Route
