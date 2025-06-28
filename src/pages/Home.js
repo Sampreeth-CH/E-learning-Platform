@@ -1,38 +1,57 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaLaptopCode, FaCertificate } from 'react-icons/fa';
 
 const Home = () => {
   return (
     <div className="home">
+      {/* HERO SECTION */}
       <section className="hero">
-        <h2>Welcome to E-Learn</h2>
-        <p>Empower your future with expert-led courses.</p>
-        <img src="https://images.unsplash.com/photo-1584697964154-9437e03e7c7b" alt="Learning" className="hero-img" />
+        <h2>Empower Your Learning Journey</h2>
+        <p>Master new skills from the comfort of your home with industry-leading experts.</p>
+        <img
+  className="hero-img"
+  src="https://media.istockphoto.com/id/1398308108/photo/3d-render-of-online-learning-concept-on-dark-blue-background.jpg?s=612x612&w=0&k=20&c=ttS_qf-MzlErX1A6KgsOGok2rxIhaSIU-sqP8iXVZdI="
+  alt="Learning Banner"
+/>
+        <Link to="/courses" className="btn-primary">Explore Courses</Link>
       </section>
 
+      {/* FEATURED COURSES / FEATURES */}
       <section className="features">
         <div className="feature-card">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Interactive" />
-          <h3>Interactive Lessons</h3>
-          <p>Engage with quizzes, examples, and practical tasks.</p>
+          <img
+  src="https://elearningindustry.com/wp-content/uploads/2020/07/are-live-online-training-sessions-a-dying-art-1.jpg"
+  alt="Live Classes"
+/>
+          <h3><FaChalkboardTeacher /> Live Sessions</h3>
+          <p>Join live, interactive sessions with professional mentors and instructors.</p>
         </div>
+
         <div className="feature-card">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Experts" />
-          <h3>Expert Instructors</h3>
-          <p>Courses taught by real-world professionals.</p>
+          <img
+  src="https://i0.wp.com/www.admecindia.co.in/wp-content/uploads/2023/08/HANDS-ON-PROJECT-IN-GRAPHIC-DESIGN-1.jpg?fit=2000%2C1112&ssl=1"
+  alt="Hands-on Projects"
+/>
+
+          <h3><FaLaptopCode /> Hands-On Projects</h3>
+          <p>Work on real-world projects to apply your skills and build your portfolio.</p>
         </div>
+
         <div className="feature-card">
-          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Certificate" />
-          <h3>Certified Programs</h3>
-          <p>Earn certificates to showcase your knowledge.</p>
+          <img
+            src="https://www.cio.com/wp-content/uploads/2023/05/certificate_gold_seal_certification_by_dny59_gettyimages-942721178_2400x1600-100788472-orig-1.jpg?quality=50&strip=all"
+            alt="Certificate"
+          />
+          <h3><FaCertificate /> Certifications</h3>
+          <p>Receive certificates upon course completion and showcase your achievements.</p>
         </div>
       </section>
 
+      {/* CTA SECTION */}
       <section className="cta">
-        <h2>Start Your Learning Journey</h2>
-        <p>Join thousands of learners today.</p>
-        <Link to="/signup" className="btn-primary">Join Now</Link>
+        <h2>Ready to Start Learning?</h2>
+        <p>Join thousands of learners and gain the skills that matter.</p>
+        <Link to="/signup" className="btn-primary">Get Started</Link>
       </section>
     </div>
   );

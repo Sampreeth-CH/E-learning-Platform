@@ -11,7 +11,7 @@ import PrivateRoute from './components/PrivateRoute'; // import here
 import { useState, useEffect } from 'react';
 import { getUser } from './utils/auth';
 import Contact from './pages/Contact';
-
+import Footer from './components/Footer';
 
 
 function App() {
@@ -56,6 +56,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
