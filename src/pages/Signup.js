@@ -12,13 +12,12 @@ const Signup = ({ setIsLoggedIn }) => {
     e.preventDefault();
 
     const newUser = {username, email, password };
-    saveUser(newUser); // Save to localStorage
+    saveUser(newUser); 
 
-    // Auto login after signup
     const user = loginUser(email, password);
     if (user) {
       setIsLoggedIn(true);
-      navigate('/login');
+      navigate('/');
     }
   };
 

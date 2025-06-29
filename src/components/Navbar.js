@@ -32,14 +32,12 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         E-Learn
       </h1>
 
-
-      {/* Hamburger/Close icon for mobile */}
       <div className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
 
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        {/* Only show icons in mobile view (use class to control if needed) */}
+
         <h1 className="nav-icon">
         <FaGraduationCap className="logo-icon" />
         E-Learn

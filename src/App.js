@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
 import { getUser } from './utils/auth';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,9 +25,11 @@ function App() {
 
   return (
     <Router basename="/E-learning">
+      <ScrollToTop /> 
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+
         <Route
           path="/courses"
           element={

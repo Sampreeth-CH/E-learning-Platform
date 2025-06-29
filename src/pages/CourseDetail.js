@@ -32,7 +32,6 @@ const courseData = {
       'Final Project: Weather App',
     ],
   },
-  // Add more courses as needed
   3: {
   title: 'UI/UX Design Basics',
   instructor: 'Alex Ray',
@@ -51,7 +50,7 @@ const courseData = {
   4: {
     title: "Web Development Bootcamp",
     instructor: "Emily Johnson",
-    imageUrl: "https://images.unsplash.com/photo-1581090700227-1e8e043c14b4",
+    imageUrl: "https://uploads.teachablecdn.com/attachments/PG7zkdkrT9aByLHBe6sv_Teachable+Thumbnails+%281%29.png",
     videoUrl: "https://www.youtube.com/embed/Q33KBiDriJY",
     description: `Become a full-stack web developer by learning HTML, CSS, JavaScript, and backend basics. Build responsive and dynamic websites from scratch.`,
     modules: [
@@ -66,7 +65,7 @@ const courseData = {
   5: {
     title: "Python for Data Science",
     instructor: "Sophie Williams",
-    imageUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981d",
+    imageUrl: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230318230239/Python-Data-Science-Tutorial.jpg",
     videoUrl: "https://www.youtube.com/embed/rfscVS0vtbw",
     description: `Master Python and its libraries like Pandas, NumPy, and Matplotlib for data analysis and visualization. Includes beginner machine learning. `,
     modules: [
@@ -81,7 +80,7 @@ const courseData = {
   6: {
     title: "Full Stack MERN Developer",
     instructor: "Michael Brown",
-    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    imageUrl: "https://media.licdn.com/dms/image/v2/D4D12AQGp_UCp3W82YA/article-cover_image-shrink_720_1280/B4DZXxf.sMHsAI-/0/1743513448088?e=2147483647&v=beta&t=nsToxH_KNK36f6j_xfNqeqM67oQL05VmQHQKZT7ozwQ",
     videoUrl: "https://www.youtube.com/embed/-0exw-9YJBo",
     description: `Build modern web applications using MongoDB, Express.js, React, and Node.js. Learn frontend and backend integration.`,
     modules: [
@@ -96,7 +95,7 @@ const courseData = {
   7: {
     title: "UI/UX Design Principles",
     instructor: "Nina Patel",
-    imageUrl: "https://images.unsplash.com/photo-1612832021146-96e2f9a7369d",
+    imageUrl: "https://lh7-us.googleusercontent.com/TPlo8EH6SlEoIC0hthDUNPsmeHsvur4yw28PZooxTNZ-_N5Bats8SZ-jT8L4ewCy3kHOAHFinxF503NINUMkTbrcCo7pchsLi-zFNc3tQHFd8tNA1vQOkGramTlFwxjbUV1NSs8kwA0tOGPV6mDl2ZdeIF9NTRbC7C1M7P6O4nGLgrwRSpFvxwmFe6kZhg",
     videoUrl: "https://www.youtube.com/embed/twsv5z2fBFY",
     description: `Discover the core principles of design thinking, usability, and user research. Explore Figma tools and interaction design.`,
     modules: [
@@ -111,7 +110,7 @@ const courseData = {
   8: {
     title: "Cybersecurity Fundamentals",
     instructor: "David Kim",
-    imageUrl: "https://images.unsplash.com/photo-1633356128957-a1e74a01e1be",
+    imageUrl: "https://s3.ap-south-1.amazonaws.com/webasha-blog/uploads/images/202502/image_750x_67a48971bba9d.webp",
     videoUrl: "https://www.youtube.com/embed/inWWhr5tnEA",
     description: `Understand the foundations of cybersecurity, including network security, encryption, and ethical hacking basics.`,
     modules: [
@@ -126,7 +125,7 @@ const courseData = {
   9: {
     title: "Android App Development",
     instructor: "Kunal Sharma",
-    imageUrl: "https://images.unsplash.com/photo-1551817958-20204fd2c40b",
+    imageUrl: "https://www.appschopper.com/blog/wp-content/uploads/2021/01/Android-App-Development.png",
     videoUrl: "https://www.youtube.com/embed/fis26HvvDII",
     description: `Learn how to build Android applications using Kotlin. Cover layouts, activities, and publishing your app.`,
     modules: [
@@ -141,7 +140,7 @@ const courseData = {
   10: {
     title: "iOS App Development with Swift",
     instructor: "Rachel Lee",
-    imageUrl: "https://images.unsplash.com/photo-1523966211575-eb4a01e7ddf6",
+    imageUrl: "https://cdn-server-blog.hiddenbrains.com/blog/wp-content/uploads/2020/04/Swift-Development-for-iOS-1.jpg",
     videoUrl: "https://www.youtube.com/embed/comQ1-x2a1Q",
     description: `Build modern iOS apps with Swift and Xcode. Learn views, navigation, and data persistence.`,
     modules: [
@@ -156,7 +155,7 @@ const courseData = {
   11: {
     title: "Cloud Computing with AWS",
     instructor: "Thomas Nguyen",
-    imageUrl: "https://images.unsplash.com/photo-1581091215367-21f35f3d5c7b",
+    imageUrl: "https://tech-gyan.in/wp-content/uploads/2021/05/Cloud-Computing-With-AWS-1.jpg",
     videoUrl: "https://www.youtube.com/embed/ulprqHHWlng",
     description: `Learn AWS services like EC2, S3, RDS and Lambda. Understand infrastructure as code and deploy cloud apps.`,
     modules: [
@@ -171,7 +170,7 @@ const courseData = {
   12: {
     title: "DevOps with Docker & Kubernetes",
     instructor: "Priya Verma",
-    imageUrl: "https://images.unsplash.com/photo-1645297602589-82d1582edc09",
+    imageUrl: "https://uploads.keitaro.com/uploads/2021/03/Docker_Kubernetes-Blog.png",
     videoUrl: "https://www.youtube.com/embed/iqqDU2crIEQ",
     description: `Master continuous integration and deployment (CI/CD) workflows using Docker and Kubernetes.`,
     modules: [
@@ -186,7 +185,7 @@ const courseData = {
   13: {
     title: "Artificial Intelligence Mastery",
     instructor: "Sara Li",
-    imageUrl: "https://images.unsplash.com/photo-1627398242454-82ddba2c14b6",
+    imageUrl: "https://www.pantechsolutions.net/wp-content/uploads/2021/12/AI-1.png",
     videoUrl: "https://www.youtube.com/embed/aircAruvnKk",
     description: `Learn core AI concepts like neural networks, computer vision, and natural language processing.`,
     modules: [
@@ -201,7 +200,7 @@ const courseData = {
   14: {
     title: "Blockchain and Web3 Development",
     instructor: "Rohit Kumar",
-    imageUrl: "https://images.unsplash.com/photo-1623050626484-bc23e1c5cb8e",
+    imageUrl: "https://wpfrank.com/wp-content/uploads/2023/05/Future-Of-Web-Development-Web3-And-Blockchain.jpg",
     videoUrl: "https://www.youtube.com/embed/gyMwXuJrbJQ",
     description: `Learn the basics of blockchain, Ethereum, and how to create and deploy smart contracts with Solidity.`,
     modules: [
@@ -216,7 +215,7 @@ const courseData = {
   15: {
     title: "Game Development with Unity",
     instructor: "Daniel Martinez",
-    imageUrl: "https://images.unsplash.com/photo-1601132359863-3e2c9621f00c",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*_JpaGhRE3iBOPAh_N5ycCw.png",
     videoUrl: "https://www.youtube.com/embed/gB1F9G0JXOo",
     description: `Build both 2D and 3D games using Unity. Learn C#, physics engines, animations, and publishing.`,
     modules: [

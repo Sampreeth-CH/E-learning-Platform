@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaLaptopCode, FaCertificate } from 'react-icons/fa';
 
-const Home = () => {
+const Home = ({ isLoggedIn }) => {
   return (
     <div className="home">
-      {/* HERO SECTION */}
       <section className="hero">
         <h2>Empower Your Learning Journey</h2>
         <p>Master new skills from the comfort of your home with industry-leading experts.</p>
@@ -16,7 +15,6 @@ const Home = () => {
         <Link to="/courses" className="btn-primary">Explore Courses</Link>
       </section>
 
-      {/* FEATURED COURSES / FEATURES */}
       <section className="features">
         <div className="feature-card">
           <img
@@ -47,11 +45,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA SECTION */}
       <section className="cta">
         <h2>Ready to Start Learning?</h2>
         <p>Join thousands of learners and gain the skills that matter.</p>
-        <Link to="/signup" className="btn-primary">Get Started</Link>
+        <div className="home-buttons">
+        {isLoggedIn ? (
+          <Link to="/courses" className="btn-primary">Go to Courses</Link>
+        ) : (
+          <Link to="/signup" className="btn-primary">Get Started</Link>
+        )}
+      </div>
       </section>
     </div>
   );
