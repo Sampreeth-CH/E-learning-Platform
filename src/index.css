@@ -1235,20 +1235,20 @@ button:hover {
   color: #1d4ed8;
 }
 
-.course-list, .achievements {
+.profile-course, .achievements {
   list-style: none;
   padding: 0;
   color: #334155;
 }
 
-.course-list li,
+.profile-course li,
 .achievements li {
   padding: 0.6rem 0;
   border-bottom: 1px solid #e2e8f0;
   font-size: 1rem;
 }
 
-.course-list li:last-child,
+.profile-course li:last-child,
 .achievements li:last-child {
   border-bottom: none;
 }

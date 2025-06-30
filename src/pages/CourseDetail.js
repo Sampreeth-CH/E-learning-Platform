@@ -6,7 +6,7 @@ const courseData = {
     title: 'React for Beginners',
     instructor: 'John Doe',
     imageUrl: 'https://lh7-us.googleusercontent.com/D6BrXu23nOJepuMbM-ZSNza1nfl8qLh1PtaGzyYUebo6llBebhDTSKODso4N6JZsFMXuwxSRga2pIqidn6rPkjHJTNd7opp-5HYY87OOFXqiC0nGCcHHenuytpXoG5u4jHzD4MVPdfgW0QvUijKh5q8',
-    videoUrl: 'https://www.youtube.com/embed/dGcsHMXbSOA',
+    videoUrl: 'https://www.youtube.com/embed/SqcY0GlETPk?si=TFGt16-Eu8QnqDvo',
     description: `This beginner-friendly course covers the fundamentals of React.js including JSX, components, props, state, hooks, and more. By the end of this course, you'll be able to build dynamic single-page web applications.`,
     modules: [
       'Introduction to React',
@@ -36,7 +36,7 @@ const courseData = {
   title: 'UI/UX Design Basics',
   instructor: 'Alex Ray',
   imageUrl: 'https://www.creative-tim.com/blog/content/images/2022/07/UX-design-courses.jpg',
-  videoUrl: 'https://www.youtube.com/embed/3gNmTQfKNa8',
+  videoUrl: 'https://www.youtube.com/embed/MGlKO2JrvxE?si=Tey1d4iJYdxDBZ83',
   description: `This course introduces you to the foundational principles of UI and UX design. You'll learn how to create visually pleasing and user-friendly digital experiences using design systems, wireframes, and tools like Figma.`,
   modules: [
     'What is UI vs UX?',

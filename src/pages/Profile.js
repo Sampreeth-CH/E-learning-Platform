@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getUser } from '../utils/auth';
-import { FaUserCircle, FaEnvelope, FaEdit, FaBook, FaSignOutAlt } from 'react-icons/fa';
+import { FaUserCircle, FaEnvelope, FaEdit, FaBook, FaSignOutAlt, FaTrophy } from 'react-icons/fa';
 
 const Profile = ({ isLoggedIn }) => {
   const [user, setUser] = useState(null);
@@ -33,13 +33,13 @@ const Profile = ({ isLoggedIn }) => {
 
       <div className="profile-details">
         <h3><FaBook /> Your Courses</h3>
-        <ul className="course-list">
+        <ul className="profile-course">
           <li>📘 JavaScript for Beginners</li>
           <li>📗 React Masterclass</li>
           <li>📙 UI/UX Design Basics</li>
         </ul>
-
-        <h3>Achievements</h3>
+        <br/>
+        <h3><FaTrophy/> Achievements</h3>
         <ul className="achievements">
           <li>🏆 Completed 5 courses</li>
           <li>🕒 40+ hours of learning</li>
