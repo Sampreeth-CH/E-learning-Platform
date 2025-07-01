@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { saveUser, loginUser } from '../utils/auth';
+import { Link } from 'react-router-dom';
+
 
 const Signup = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState('');
@@ -59,6 +61,7 @@ const Signup = ({ setIsLoggedIn }) => {
 
         <button type="submit">Signup</button>
       </form>
+      <p className="checksign">Already have an account? <Link to='/login'>Login</Link></p>
     </div>
   );
 };

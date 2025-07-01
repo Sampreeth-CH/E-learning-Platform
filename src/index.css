@@ -1316,3 +1316,15 @@ button:hover {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
+
+
+
+.checksign{
+  margin-top: 1rem;
+  color: #475569;
+}
+
+.checksign a{
+  color: #2563eb;
+  font-weight: 500;
+}
