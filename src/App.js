@@ -51,14 +51,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
-        <Route
-          path="/profile"
-          element={
-            <PrivateRoute>
-              <Profile isLoggedIn={isLoggedIn} />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/profile" element={
+          <PrivateRoute>
+            <Profile isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+          </PrivateRoute>} />
       </Routes>
       <Footer/>
     </Router>

@@ -62,14 +62,14 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_xwtx43c',     // ✅ your EmailJS service ID
-        'template_dnau9l7',    // ✅ your template ID
+        'service_xwtx43c',
+        'template_dnau9l7',
         formRef.current,
-        'j0GWMeMtoWB0v5rBo'    // ✅ your public key
+        'j0GWMeMtoWB0v5rBo'
       )
       .then(() => {
         alert('✅ Message sent successfully!');
-        formRef.current.reset(); // ✅ corrected here
+        formRef.current.reset();
       })
       .catch((error) => {
         alert('❌ Failed to send message. Please try again.');
