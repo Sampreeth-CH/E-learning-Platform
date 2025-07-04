@@ -1,6 +1,7 @@
 const USERS_KEY = 'users';
 const LOGGED_IN_USER_KEY = 'loggedInUser';
 
+
 export const saveUser = (user) => {
   const users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
   users.push(user);

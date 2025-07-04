@@ -17,6 +17,11 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
   const [editing, setEditing] = useState(false);
   const [editedData, setEditedData] = useState({ username: '', email: '' });
 
+  const [profileImage, setProfileImage] = useState(
+  localStorage.getItem('profileImage') || null
+);
+
+
   useEffect(() => {
     const data = getUser();
     if (data) {
@@ -29,15 +34,14 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const handleSave = () => {
     setUser(editedData);
-    setEditing(false);
-    
     localStorage.setItem('user', JSON.stringify(editedData));
-    alert('✅Profile updated successfully!');
+    setEditing(false);
+    alert('✅ Profile updated successfully!');
   };
 
   const handleLogout = () => {
     logoutUser();
-    setIsLoggedIn(false);
+    if (setIsLoggedIn) setIsLoggedIn(false);
     navigate('/');
   };
 
@@ -49,29 +53,85 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
     );
   }
 
+  const handleImageUpload = (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setProfileImage(reader.result);
+      localStorage.setItem('profileImage', reader.result);
+    };
+    reader.readAsDataURL(file);
+  }
+};
+const handleRemoveImage = () => {
+  setProfileImage('');
+  localStorage.removeItem('profileImage');
+  alert('Profile picture removed!');
+};
+
+
+
   return (
     <div className="profile">
       <div className="profile-card">
-        <FaUserCircle className="profile-icon" />
+
+<div className="profile-image-wrapper">
+  {profileImage ? (
+    <img src={profileImage} alt="Profile" className="profile-image" />
+  ) : (
+    <FaUserCircle className="profile-icon" />
+  )}
+
+  {editing && (
+    <>
+      <label htmlFor="upload-image" className="upload-btn">
+        Upload Profile Picture
+      </label>
+      <input
+        id="upload-image"
+        type="file"
+        accept="image/*"
+        onChange={handleImageUpload}
+        className="hidden-file-input"
+      />
+      {profileImage && (
+        <button className="remove-btn" onClick={handleRemoveImage}>
+          Remove Picture
+        </button>
+      )}
+    </>
+  )}
+</div>
+
+
         {editing ? (
           <>
             <input
               type="text"
               value={editedData.username}
-              onChange={(e) => setEditedData({ ...editedData, username: e.target.value })}
+              onChange={(e) =>
+                setEditedData({ ...editedData, username: e.target.value })
+              }
               className="profile-input"
+              placeholder="Username"
             />
             <input
               type="email"
               value={editedData.email}
-              onChange={(e) => setEditedData({ ...editedData, email: e.target.value })}
+              onChange={(e) =>
+                setEditedData({ ...editedData, email: e.target.value })
+              }
               className="profile-input"
+              placeholder="Email"
             />
           </>
         ) : (
           <>
             <h2>{user.username}</h2>
-            <p><FaEnvelope /> {user.email}</p>
+            <p>
+              <FaEnvelope /> {user.email}
+            </p>
           </>
         )}
 
@@ -92,14 +152,20 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
       </div>
 
       <div className="profile-details">
-        <h3><FaBook /> Your Courses</h3>
+        <h3>
+          <FaBook /> Your Courses
+        </h3>
         <ul className="profile-course">
           <li>📘 JavaScript for Beginners</li>
           <li>📗 React Masterclass</li>
           <li>📙 UI/UX Design Basics</li>
         </ul>
+
         <br />
-        <h3><FaTrophy /> Achievements</h3>
+
+        <h3>
+          <FaTrophy /> Achievements
+        </h3>
         <ul className="achievements">
           <li>🏆 Completed 5 courses</li>
           <li>🕒 40+ hours of learning</li>
@@ -111,4 +177,3 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
 };
 
 export default Profile;
-
