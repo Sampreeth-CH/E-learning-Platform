@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <h2>PES-Learning</h2>
+        <h2>S-Learning</h2>
         <p>Empowering learning, one course at a time.</p>
         <div className="social-icons">
           <a href="#"><FaFacebook /></a>
-          <a href="#"><FaTwitter /></a>
+          <a href="https://x.com/Sampreeth_CH?t=CQnsrTlfD8R8sYvLlYWPRQ&s=08"><FaTwitter /></a>
           <a href="#"><FaInstagram /></a>
-          <a href="#"><FaLinkedin /></a>
+          <a href="https://www.linkedin.com/in/sampreeth-ch-098a3a30a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedin /></a>
         </div>
       </div>
       <div className="footer-links">
