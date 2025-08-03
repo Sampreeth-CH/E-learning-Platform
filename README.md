@@ -43,11 +43,10 @@ An advanced, responsive, and interactive e-learning website built with **React**
 
 ## 📸 Screenshots
 
-| Home Page | Course Details | Contact Page | Profile page |
-|-----------|----------------|--------------|--------------|
-| ![Home]() | ![Course]() | ![Contact]() | ![Profile]() |
-
-
+![Home Page](./img/home.png)
+![Course Page](./img/course.png)
+![Contact](./img/contact.png)
+![Profile](.img/profile.png)
 
 ---
 
