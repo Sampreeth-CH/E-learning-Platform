@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="social-icons">
           <a href="#"><FaFacebook /></a>
           <a href="https://x.com/Sampreeth_CH?t=CQnsrTlfD8R8sYvLlYWPRQ&s=08"><FaTwitter /></a>
-          <a href="#"><FaInstagram /></a>
+          <a href="https://www.instagram.com/sampreeth_ch/?hl=en#"><FaInstagram /></a>
           <a href="https://www.linkedin.com/in/sampreeth-ch-098a3a30a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedin /></a>
         </div>
       </div>
