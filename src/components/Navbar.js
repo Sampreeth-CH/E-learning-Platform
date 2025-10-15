@@ -29,7 +29,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
     <nav className="navbar">
       <h1 className="brand">
         <FaGraduationCap className="logo-icon" />
-        S-Learning
+        E-Learning
       </h1>
 
       <div className="menu-icon" onClick={toggleMenu}>

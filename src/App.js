@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/E-learning">
+    <Router basename="/E-learning-Platform">
       <ScrollToTop /> 
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>

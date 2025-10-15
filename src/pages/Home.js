@@ -18,7 +18,7 @@ const Home = ({ isLoggedIn }) => {
       <section className="features">
         <div className="feature-card">
           <img
-  src="https://elearningindustry.com/wp-content/uploads/2020/07/are-live-online-training-sessions-a-dying-art-1.jpg"
+  src="https://tse1.mm.bing.net/th/id/OIP.LHF5F8ICwz9qDxJ6B8PysgHaEK?cb=12&pid=ImgDet&w=200&h=111&c=7&dpr=1.3&o=7&rm=3"
   alt="Live Classes"
 />
           <h3><FaChalkboardTeacher /> Live Sessions</h3>
