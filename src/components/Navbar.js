@@ -40,7 +40,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
         <h1 className="nav-icon">
         <FaGraduationCap className="logo-icon" />
-        PES-Learning
+        E-Learning
       </h1>
         <li>
           <Link to="/" onClick={closeMenu}>
